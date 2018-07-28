@@ -8,7 +8,7 @@
   			  <script src="soundmanager2-jsmin.js"></script>
        </head>
 
-       <body>
+       <body onload="showMessage()">
               <div align="center" id="embed-html"></div>
               <script type="text/javascript" src="html/html.nocache.js"></script>
        </body>
@@ -26,6 +26,11 @@
                 evt.stopPropagation();
                 evt.target.style.cursor = '';
               }
+              
+              function showMessage() {
+                     alert("Warning: on slower computers the game might be unbeatable! (Internal computations depend on the framerate)");
+              }
+              
               document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
               document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
        </script>
